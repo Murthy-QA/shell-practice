@@ -7,7 +7,7 @@ SUM=$(($NUM1+$NUM2))
 
 echo "Sum is : $SUM"
 
-Flowers={"Rose" "Jasmine" "Sunflower" "RedLove"}
+Flowers=("Rose" "Jasmine" "Sunflower" "RedLove")
 echo "Flowers are : ${Flowers[0]}"
 
 
