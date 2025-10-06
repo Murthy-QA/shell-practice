@@ -7,7 +7,7 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 
-dnf install nginx -y
+dnf remove nginx -y
 
 if [ $? -ne 0 ]; then
     echo "INSTALLING: MYSQL is failure"
