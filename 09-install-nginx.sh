@@ -10,8 +10,8 @@ fi
 dnf remove nginx -y
 
 if [ $? -ne 0 ]; then
-    echo "INSTALLING: MYSQL is failure"
+    echo "INSTALLING: NGINZ is failure"
     exit 1
 else
-    echo "MYSQL installed successfully"
+    echo "NGINX installed successfully"
 fi
