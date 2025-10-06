@@ -9,15 +9,13 @@ fi
 
 VALIDATE()
 {
-    if [ $1 -ne 0 ]; then
-        echo "INSTALLING: $2 is failure"
+    if [ $? -ne 0 ]; then
+        echo "INSTALLING: $1 is failure"
         exit 1
     else
-    echo "$2 installed successfully"
+    echo "$1 installed successfully"
     fi
 }
 
-dnf install python3 -y
+dnf install $1 -y
 
-
-dnf install zip -y
