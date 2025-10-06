@@ -9,13 +9,16 @@ fi
 
 VALIDATE()
 {
-    if [ $? -ne 0 ]; then
-        echo "REMOVING: $1 is failure"
+    if [ $1 -ne 0 ]; then
+        echo "INSTALLING: $2 is failure"
         exit 1
     else
-    echo "$1 removed successfully"
+    echo "$2 installed successfully"
     fi
 }
 
-dnf remove $1 -y
+dnf install $3 -y
+VALIDATE $? "PYTHON"
 
+dnf install $4 -y
+VALIDATE $? "ZIP"
