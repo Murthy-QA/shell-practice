@@ -1,8 +1,9 @@
 #!/bin/bash
 
+echo " Enter a Number"
 read NUMBER
-if [$(($NUMBER -eq 100))]; then
-    echo "Number is equal to 100 : $NUMBER"
+if [($NUMBER -le 100)]; then
+    echo "Number is less than 100"
 else
-    echo "Number is not equal to 100 : $NUMBER"
+    echo "Number is greater than or equal to 100"
 fi
