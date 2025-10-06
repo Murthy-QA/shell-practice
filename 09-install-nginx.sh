@@ -7,10 +7,10 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 
-dnf remove nginx -y
+dnf remove nginx
 
 if [ $? -ne 0 ]; then
-    echo "INSTALLING: NGINX is removal failure"
+    echo "removing: NGINX is removal failure"
     exit 1
 else
     echo "NGINX removed successfully"
