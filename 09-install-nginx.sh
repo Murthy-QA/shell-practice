@@ -10,8 +10,8 @@ fi
 dnf remove nginx -y
 
 if [ $? -ne 0 ]; then
-    echo "INSTALLING: NGINZ is failure"
+    echo "INSTALLING: NGINX is removal failure"
     exit 1
 else
-    echo "NGINX installed successfully"
+    echo "NGINX removed successfully"
 fi
