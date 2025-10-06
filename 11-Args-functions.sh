@@ -18,3 +18,4 @@ VALIDATE()
 }
 
 dnf remove $1 -y
+VALIDATE $1

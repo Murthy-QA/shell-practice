@@ -17,8 +17,8 @@ VALIDATE()
     fi
 }
 
-dnf install $3 -y
+dnf install python3 -y
 VALIDATE $? "PYTHON"
 
-dnf install $4 -y
+dnf install mysql -y
 VALIDATE $? "ZIP"
