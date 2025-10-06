@@ -2,8 +2,8 @@
 
 echo "Enter a Number"
 read NUMBER
-if [$(($NUMBER)) -eq 10 ]; then
-    echo "Given number $NUMBER is equal to 10"
+if [ $(($NUMBER)) -le 100 ]; then
+    echo "Given number $NUMBER is less than 100"
 else
-    echo "Given number $NUMBER is not equal to 10"
+    echo "Given number $NUMBER is greater than or equal to 100"
 fi
