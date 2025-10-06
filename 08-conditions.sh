@@ -1,10 +1,9 @@
 #!/bin/bash
 
-echo "Please enter the number:"
+echo "Enter a Number"
 read NUMBER
-
-if [ $(($NUMBER % 2)) -eq 0 ]; then
-    echo "Given number $NUMBER is EVEN"
+if [ $(($NUMBER)) -eq 10 ]; then
+    echo "Given number $NUMBER is equal to 10"
 else
-    echo "Given number $NUMBER is ODD"
+    echo "Given number $NUMBER is not equal to 10"
 fi
