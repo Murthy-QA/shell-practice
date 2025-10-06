@@ -10,12 +10,12 @@ fi
 VALIDATE()
 {
     if [ $? -ne 0 ]; then
-        echo "REMOVING: $1 is failure"
+        echo "INSTALLING: $1 is failure"
         exit 1
     else
-    echo "$1 removed successfully"
+    echo "$1 Installed successfully"
     fi
 }
 
-dnf remove $1 -y
+dnf install $1 -y
 VALIDATE $1
