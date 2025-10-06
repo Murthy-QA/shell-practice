@@ -18,7 +18,6 @@ VALIDATE()
 }
 
 dnf install python3 -y
-VALIDATE $? "PYTHON"
+
 
 dnf install zip -y
-VALIDATE $? "ZIP"
