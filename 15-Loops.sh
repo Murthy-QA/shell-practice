@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
@@ -20,10 +21,10 @@ fi
 
 VALIDATE(){ # functions receive inputs through args just like shell script args
     if [ $1 -ne 0 ]; then
-        echo -e "Removing $2 ... $R FAILURE $N" | tee -a $LOG_FILE
+        echo -e "Installing $2 ... $R FAILURE $N" | tee -a $LOG_FILE
         exit 1
     else
-        echo -e "Removing $2 ... $G SUCCESS $N" | tee -a $LOG_FILE
+        echo -e "Installing $2 ... $G SUCCESS $N" | tee -a $LOG_FILE
     fi
 }
 
@@ -36,7 +37,7 @@ do
 
     # if exit status is 0, already installed. -ne 0 need to install it
     if [ $? -ne 0 ]; then
-        dnf remove $package -y &>>$LOG_FILE
+        dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "$package"
     else
         echo -e "$package already installed ... $Y SKIPPING $N"
