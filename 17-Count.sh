@@ -15,5 +15,5 @@
 FRUITS_NAMES=("APPLE" "BANANA" "GUAVA" "PINEAPPLE" "ORANGE")
 for fruit in $FRUITS_NAMES[@]
 do
-    echo "Fruit name is : $FRUITS_NAMES[fruit]"
+    echo "Fruit name is : $fruit"
 done
