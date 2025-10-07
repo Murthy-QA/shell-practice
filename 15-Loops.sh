@@ -20,10 +20,10 @@ fi
 
 VALIDATE(){ # functions receive inputs through args just like shell script args
     if [ $1 -ne 0 ]; then
-        echo -e "Installing $2 ... $R FAILURE $N" | tee -a $LOG_FILE
+        echo -e "Removing $2 ... $R FAILURE $N" | tee -a $LOG_FILE
         exit 1
     else
-        echo -e "Installing $2 ... $G SUCCESS $N" | tee -a $LOG_FILE
+        echo -e "Removing $2 ... $G SUCCESS $N" | tee -a $LOG_FILE
     fi
 }
 
@@ -36,7 +36,7 @@ do
 
     # if exit status is 0, already installed. -ne 0 need to install it
     if [ $? -ne 0 ]; then
-        dnf install $package -y &>>$LOG_FILE
+        dnf remove $package -y &>>$LOG_FILE
         VALIDATE $? "$package"
     else
         echo -e "$package already installed ... $Y SKIPPING $N"
